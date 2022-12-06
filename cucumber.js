@@ -3,6 +3,8 @@ let options = [
 '--require ./pages/*.page.ts',
 '--require ./steps/*.steps.ts', // Load step definitions
 '--format progress', // Load custom formatter
+'--format html:./Reports/cucumber_report.html',
+'--format json:./Reports/cucumber_report.json',
 
 ]. join(' ');
 

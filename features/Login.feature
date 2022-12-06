@@ -1,6 +1,6 @@
 Feature: Playwright HRMS Login
 Feature Description : To run Login tests with playwright library
 
-@demo
+@Login
 Scenario: Verfiy HRMS Login page
 Given Login to HRMS
