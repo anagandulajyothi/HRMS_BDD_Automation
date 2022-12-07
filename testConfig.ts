@@ -23,5 +23,12 @@ export const testConfig = {
  Itemcode:faker.random.numeric(3),
  Specification1:faker.name.firstName(),
  Specification2:faker.name.firstName(),
- serial:faker.name.firstName()
+ serial:faker.name.firstName(),
+ location:'Hyd-Gachibowli',
+ pendingstatus:'Pending',
+ updatedtoastmessage:'Data has been Successfully Updated.',
+ Assettoastmessage:'Asset has been created Successfully.',
+ logouttoastmessage:'Logout Success..',
+ approvaltoastmessage:'Successfully Approved',
+
 }

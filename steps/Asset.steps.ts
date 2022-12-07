@@ -1,4 +1,4 @@
-import { Then } from "@cucumber/cucumber";
+import { Then,Given,When } from "@cucumber/cucumber";
 import { Asset } from "../pages/Asset.page";
 import { testConfig } from "../testConfig";
 import { Utils } from "../Utils/Utils";
@@ -7,7 +7,7 @@ import { page } from "./setup";
 const utils = new Utils()
 const asset = new Asset()
 
-Then('Create Category',async () => {
+Then('Techsupport Employee Creates Category',async () => {
  await asset.asset()
  await asset.ManageCategory()
  await asset.addcategory()
@@ -16,9 +16,9 @@ Then('Create Category',async () => {
  await asset.code(testConfig.Categorycode)
  await asset.addbutton()
  await asset.close()
- await utils.assertSucessMsg("Data has been Successfully Updated.")
+ await utils.assertSucessMsg(testConfig.updatedtoastmessage)
 })
-Then('Create Subcategory',async () => {
+Then('Techsupport Employee Creates Subcategory',async () => {
  await asset.asset()
  await asset.managesubcategory()
  await asset.addcategory()
@@ -29,9 +29,9 @@ Then('Create Subcategory',async () => {
  await asset.code(testConfig.Subcategorycode)
  await asset.addbutton()
  await asset.close()
- await utils.assertSucessMsg("Data has been Successfully Updated.")
+ await utils.assertSucessMsg(testConfig.updatedtoastmessage)
 })
-Then('Create Item',async () => {
+Then('Techsupport Employee Creates Item',async () => {
  await asset.asset()
  await asset.manageitem()
  await asset.additem()
@@ -45,9 +45,9 @@ Then('Create Item',async () => {
  await asset.code(testConfig.Itemcode)
  await asset.addbutton()
  await asset.close()
- await utils.assertSucessMsg("Data has been Successfully Updated.")
+ await utils.assertSucessMsg(testConfig.updatedtoastmessage)
 })
-Then('Create Asset', async () => {
+Then('Techsupport Employee Creates Asset', async () => {
  await asset.asset()
  await asset.manageasset()
  await asset.assetbutton()
@@ -60,25 +60,27 @@ Then('Create Asset', async () => {
  await asset.assetitemclick()
  await asset.searchassetitem(testConfig.Item)
  await asset.assetselectitem()
- await asset.clicklocation("Hyd-Gachibowli")
+ await asset.clicklocation(testConfig.location)
  await asset.specification1(testConfig.Specification1)
  await asset.specification2(testConfig.Specification2)
  await asset.serial(testConfig.serial)
  await asset.saveasset()
  await asset.closebtn()
  await page.waitForTimeout(3000)
- await utils.assertsucessMsg("Asset has been created Successfully.")
+ await utils.assertsucessMsg(testConfig.Assettoastmessage)
 })
-Then('Approve Asset', async () => {
+Then('Techsupport HOD Approve Asset', async () => {
  await asset.asset()
  await asset.manageasset()
- await asset.pendingclick("Pending")
+ await asset.pendingclick(testConfig.pendingstatus)
  await page.waitForTimeout(3000)
  await asset.categoryselect(testConfig.Categoryname)
- await asset.selectlocationhyd("Hyd-Gachibowli")
+ await asset.selectlocationhyd(testConfig.location)
  await asset.editbtn()
  await asset.approvalbutton()
  await asset.approve()
  await asset.approvalclose()
- await utils.assertapprovalsuccessmsg("Successfully Approved")
+ await utils.assertapprovalsuccessmsg(testConfig.approvaltoastmessage)
+ await page.waitForTimeout(2000)
 })
+
