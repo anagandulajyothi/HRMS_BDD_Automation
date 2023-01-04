@@ -15,7 +15,13 @@ import { page } from '../steps/setup'
     async Addskill_cancel(){
       await page.locator('input:has-text("No")').click()
     }
- }
+    async  Profile(){
+      await page.locator('//div[@id="divUserName"]').click()
+    }
+    async Logout(){
+      await page.locator(`//a[normalize-space()="Log Out"]`).click()
+  }
+}
   
 
 
