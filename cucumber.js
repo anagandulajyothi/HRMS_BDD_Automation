@@ -5,6 +5,8 @@ let options = [
 '--format progress', // Load custom formatter
 '--format html:./Reports/cucumber_report.html',
 '--format json:./Reports/cucumber_report.json',
+'--format ./reporter.js',
+'tags={"@Login","@Asset"}'
 
 ]. join(' ');
 

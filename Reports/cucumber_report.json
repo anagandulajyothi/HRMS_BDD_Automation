@@ -6,7 +6,7 @@
         "description": "",
         "id": "playwright-hrms-asset;verfiy-hrms-create-asset",
         "keyword": "Scenario",
-        "line": 5,
+        "line": 4,
         "name": "Verfiy HRMS Create Asset",
         "steps": [
           {
@@ -14,20 +14,33 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8898951200
+              "duration": 10102559800
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
-            "name": "Login to HRMS",
+            "line": 5,
+            "name": "Login to HRMS \"techsupportemp@intonenetworks.com\" username and password \"Password1!\"",
             "match": {
-              "location": "steps\\Login.steps.ts:7"
+              "location": "steps\\Login.steps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 5276901400
+              "duration": 703503700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "Add skill",
+            "match": {
+              "location": "steps\\Login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5135179199
             }
           },
           {
@@ -40,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9247745800
+              "duration": 12626600600
             }
           },
           {
@@ -49,11 +62,11 @@
             "line": 8,
             "name": "Techsupport Employee Creates Subcategory",
             "match": {
-              "location": "steps\\Asset.steps.ts:21"
+              "location": "steps\\Asset.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 16980659600
+              "duration": 21397000199
             }
           },
           {
@@ -62,11 +75,11 @@
             "line": 9,
             "name": "Techsupport Employee Creates Item",
             "match": {
-              "location": "steps\\Asset.steps.ts:34"
+              "location": "steps\\Asset.steps.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 16067950900
+              "duration": 14745858099
             }
           },
           {
@@ -75,24 +88,24 @@
             "line": 10,
             "name": "Techsupport Employee Creates Asset",
             "match": {
-              "location": "steps\\Asset.steps.ts:50"
+              "location": "steps\\Asset.steps.ts:52"
             },
             "result": {
               "status": "passed",
-              "duration": 22706936500
+              "duration": 23790775499
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "Relogin",
+            "name": "Relogin \"techsupporthod@intonenetworks.com\" username and password \"Password1!\"",
             "match": {
-              "location": "steps\\Login.steps.ts:13"
+              "location": "steps\\Login.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 1183092800
+              "duration": 1305914299
             }
           },
           {
@@ -101,11 +114,11 @@
             "line": 12,
             "name": "Techsupport HOD Approve Asset",
             "match": {
-              "location": "steps\\Asset.steps.ts:72"
+              "location": "steps\\Asset.steps.ts:74"
             },
             "result": {
               "status": "passed",
-              "duration": 14471996199
+              "duration": 16363549799
             }
           },
           {
@@ -113,14 +126,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 778044000
+              "duration": 824810800
             }
           }
         ],
         "tags": [
           {
             "name": "@Asset",
-            "line": 4
+            "line": 3
           }
         ],
         "type": "scenario"
@@ -132,61 +145,5 @@
     "name": "Playwright HRMS Asset",
     "tags": [],
     "uri": "features\\Asset.feature"
-  },
-  {
-    "description": "Feature Description : To run Login tests with playwright library",
-    "elements": [
-      {
-        "description": "",
-        "id": "playwright-hrms-login;verfiy-hrms-login-page",
-        "keyword": "Scenario",
-        "line": 5,
-        "name": "Verfiy HRMS Login page",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 6028377400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 6,
-            "name": "Login to HRMS",
-            "match": {
-              "location": "steps\\Login.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5129660600
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 832574600
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Login",
-            "line": 4
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "playwright-hrms-login",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Playwright HRMS Login",
-    "tags": [],
-    "uri": "features\\Login.feature"
   }
 ]
