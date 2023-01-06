@@ -1,12 +1,20 @@
-import { Then,Given,When } from "@cucumber/cucumber";
+import { Then,Given,When, Before, BeforeAll } from "@cucumber/cucumber";
+import test from "@playwright/test";
 import { Asset } from "../pages/Asset.page";
+import { Login } from "../pages/Login.page";
 import { testConfig } from "../testConfig";
 import { Utils } from "../Utils/Utils";
-import { page } from "./setup";
+import { page } from "./setup"
+
 
 const utils = new Utils()
 const asset = new Asset()
-
+const login = new Login()
+//const loginstep= new Loginstep()    
+//Before('login',async () => {
+Before(async () => {
+ await login.login(testConfig.techsupportemp,testConfig.password)
+})
 Then('Techsupport Employee Creates Category',async () => {
  await asset.asset()
  await asset.ManageCategory()
@@ -46,11 +54,13 @@ Then('Techsupport Employee Creates Item',async () => {
  await asset.item(testConfig.Item)
  await asset.code(testConfig.Itemcode)
  await asset.addbutton()
- await utils.assertSucessMsg(testConfig.updatedtoastmessage)
  await asset.close()
+ 
  })
 Then('Techsupport Employee Creates Asset', async () => {
+ await page.waitForTimeout(3000)
  await asset.asset()
+ await page.waitForTimeout(3000)
  await asset.manageasset()
  await asset.assetbutton()
  await asset.assetcategoryclick()

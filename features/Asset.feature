@@ -2,7 +2,6 @@ Feature: Playwright HRMS Asset
 Feature Description : To run Login tests with playwright library
 @Asset
 Scenario: Verfiy HRMS Create Asset
-Given Login to HRMS "techsupportemp@intonenetworks.com" username and password "Password1!" 
 And Add skill
 And Techsupport Employee Creates Category
 And Techsupport Employee Creates Subcategory

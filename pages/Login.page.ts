@@ -25,6 +25,12 @@ export class Login  {
     async clearpassword(){
      await page.locator('#Password').clear()
     }
+
+    async login(username:string,password:string){
+        await this.fillUsername(username)
+        await this.fillPassword(password)
+        await this.clickLogin()
+ }
 }
   
 
