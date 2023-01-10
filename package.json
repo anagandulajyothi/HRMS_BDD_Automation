@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js -p test_runner node./htmlReportGenerator.ts"
+    "test": "npx cucumber-js -p test_runner node./htmlReportGenerator.ts",
+    "allure_run": "npm run test --reporter=line,allure-playwright",
+    "allure_generate": "allure generate ./allure-results —-clean",
+    "allure_open": "allure open ./allure-report"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +20,10 @@
   "devDependencies": {
     "@cucumber/cucumber": "^8.9.0",
     "@faker-js/faker": "^7.6.0",
-    "allure-playwright": "^2.0.0-beta.20"
+    "allure-commandline": "^2.20.1",
+    "allure-cucumberjs": "^2.0.0-beta.23",
+    "allure-js-commons": "^2.0.0-beta.23",
+    "allure-playwright": "^2.0.0-beta.20",
+    "experimental-allure-playwright": "^0.0.3"
   }
 }

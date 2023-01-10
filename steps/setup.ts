@@ -1,4 +1,4 @@
-  import { After, Before, setDefaultTimeout, Status } from '@cucumber/cucumber' ;
+import { After, Before, setDefaultTimeout, Status } from '@cucumber/cucumber' ;
 import { Browser,chromium, Page } from 'playwright';
 let page: Page;
 let browser: Browser;
